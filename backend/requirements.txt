@@ -1,7 +1,7 @@
 fastapi==0.95.2
 uvicorn[standard]==0.22.0
 pydantic==1.10.11
-motor==4.4.0
+motor==3.7.1
 python-jose==3.3.0
 passlib[bcrypt]==1.7.4
 boto3==1.28.47
