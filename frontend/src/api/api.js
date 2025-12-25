@@ -1,11 +1,16 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
+// Set token dynamically after login
 export const setAuthToken = (token) => {
-  api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  if (token) {
+    api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  } else {
+    delete api.defaults.headers.common["Authorization"];
+  }
 };
 
 export default api;
