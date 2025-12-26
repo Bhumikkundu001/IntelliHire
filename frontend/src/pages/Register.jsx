@@ -9,7 +9,7 @@ function Register({ onSuccess, onBack }) {
 
   const register = async () => {
     try {
-      await api.post("/auth/register", {
+      await api.post("/api/auth/register", {
         name,
         email,
         password,
@@ -92,21 +92,6 @@ function Register({ onSuccess, onBack }) {
           </p>
         )}
       </div>
-
-      <style>
-        {`
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        `}
-      </style>
     </div>
   );
 }
