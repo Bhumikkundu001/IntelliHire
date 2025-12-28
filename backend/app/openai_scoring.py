@@ -22,7 +22,7 @@ def score_answer(question: str, answer: str) -> str:
             "technical_depth": random.randint(5, 9),
             "confidence": random.randint(6, 9),
             "overall_score": random.randint(6, 9),
-            "feedback": "Good answer. Shows understanding of the topic. Can improve with more real-world examples."
+            "feedback": "Good answer. Shows understanding of the t opic. Can improve with more real-world examples."
         }
 
     return json.dumps(score)
